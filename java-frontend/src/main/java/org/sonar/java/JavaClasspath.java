@@ -69,7 +69,7 @@ public class JavaClasspath extends AbstractJavaClasspath {
       elements = new ArrayList<>(binaries);
       if (libraries.isEmpty() && hasJavaSources()) {
         String warning = "Bytecode of dependencies was not provided for analysis of source files, " +
-          "you might end up with less precise results. Bytecode can be provided using sonar.java.libraries property";
+          "you might end up with less precise results. Bytecode can be provided using sonar.java.libraries property.";
         LOG.warn(warning);
         if (analysisWarnings != null) {
           analysisWarnings.addUnique(warning);

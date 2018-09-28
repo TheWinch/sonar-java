@@ -91,7 +91,7 @@ public class JavaClasspathTest {
     assertThat(javaClasspath.getFilesFromProperty(JavaClasspathProperties.SONAR_JAVA_LIBRARIES)).isEmpty();
     assertThat(javaClasspath.hasJavaSources()).isTrue();
     String warning = "Bytecode of dependencies was not provided for analysis of source files, " +
-      "you might end up with less precise results. Bytecode can be provided using sonar.java.libraries property";
+      "you might end up with less precise results. Bytecode can be provided using sonar.java.libraries property.";
     verify(analysisWarnings).addUnique(eq(warning));
   }
 
